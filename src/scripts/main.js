@@ -21,22 +21,25 @@ new Chart("myChart", {
 			title: {
 				display: true,
 				text: "Распределение Максвелла-Больцмана",
-				fontSize: 16
+			},
+         legend: {
+				display: false 
 			}
 		},
 		scales: {
 			x: {
 				title: {
 					display: true,
-					text: 'V (м/с)' // Подпись для оси X
+					text: 'V (м/с)', // Подпись для оси X
+               align: 'end',
 				}
 			},
 			y: {
 				title: {
 					display: true,
-					text: 'F(x) (с / м)' // Подпись для оси Y
+					text: 'F(x) (с / м)', // Подпись для оси Y
+               align: 'end',
 				},
-            reverse: false
 			}
 		}
 	}
