@@ -1,10 +1,11 @@
 export default class ChartSystem {
 	constructor() {
 		this.datasetsOptions = []
+		this.highestX = []
 		this.MyChart = ""
 	}
 
-	createCharts(xValues) {
+	createCharts() {
 		if (this.MyChart !== "") {
 			this.MyChart.destroy()
 		}
@@ -12,7 +13,7 @@ export default class ChartSystem {
 		this.MyChart = new Chart("myChart", {
 			type: "line",
 			data: {
-				labels: xValues,
+				labels: this.highestX,
 				datasets: this.datasetsOptions
 			},
 			options: {
@@ -56,6 +57,10 @@ export default class ChartSystem {
          xValues.push(x)
          yValues.push(maksvelsChart(x, M, T))
       }
+
+		if(this.highestX.length < xValues.length){
+			this.highestX = xValues
+		}
 
 		let newChart = {
 			id: id,
