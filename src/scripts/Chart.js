@@ -8,8 +8,6 @@ export default class ChartSystem {
 		if (this.MyChart !== "") {
 			this.MyChart.destroy()
 		}
-
-		console.log(this.datasetsOptions)
       
 		this.MyChart = new Chart("myChart", {
 			type: "line",
@@ -31,7 +29,7 @@ export default class ChartSystem {
 					x: {
 						title: {
 							display: true,
-							text: "V (м/с)", // Подпись для оси X
+							text: "V (м/с)", // title for OX
 							align: "end",
 							color: "rgb(0, 0, 0)"
 						}
@@ -39,7 +37,7 @@ export default class ChartSystem {
 					y: {
 						title: {
 							display: true,
-							text: "F(x) (м/c)", // Подпись для оси Y
+							text: "F(x) (м/c)", // title for OY
 							align: "end",
 							color: "rgb(0, 0, 0)"
 						}
@@ -72,18 +70,16 @@ export default class ChartSystem {
 	}
 
 	delChart() {
-		//
+		// in future
 	}
 }
 
 function maksvelsChart(v, M, T) {
-   const R = 8.314 // универсальная газовая постоянная в Дж/(моль·К)
+   const R = 8.314
    const coefficient = Math.pow(M / (2 * Math.PI * R * T), 3/2)
    const exponential = Math.exp(-(M * Math.pow(v, 2)) / (2 * R * T))	
 
    let result = 4 * Math.PI * coefficient * Math.pow(v, 2) * exponential * 1000
-
-   console.log(M,T,v, result)
    
    return result
 }
