@@ -8,10 +8,12 @@ function createChart() {
 		function maksvelsChart(v, M, T) {
 			const R = 8.314 // универсальная газовая постоянная в Дж/(моль·К)
 
-			const coefficient = Math.pow(M / (2 * Math.PI * R * T), 3 / 2)
-			const exponential = -Math.exp(1)*(M * Math.pow(v, 2)) / (2 * R * T)
-			console.log(`${v}: ${4 * Math.PI * coefficient * Math.pow(v, 2) * Math.E * exponential}`)
-			return (4 * Math.PI * coefficient * Math.pow(v, 2) * exponential)
+			const coefficient = Math.pow(M / (2 * Math.PI * R * T), 3/2)
+			const exponential = Math.exp(-(M * Math.pow(v, 2)) / (2 * R * T))	
+
+			let result = 4 * Math.PI * coefficient * Math.pow(v, 2) * exponential *1000
+
+			return result
 		}
 
 		for (let x = i1; x <= i2; x += step) {
@@ -64,7 +66,7 @@ function createChart() {
 				y: {
 					title: {
 						display: true,
-						text: "F(x) (с / м)", // Подпись для оси Y
+						text: "F(x) (м/c)", // Подпись для оси Y
 						align: "end",
 						color: "rgb(0, 0, 0)"
 					}
