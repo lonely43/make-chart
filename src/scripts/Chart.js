@@ -22,7 +22,7 @@ export default class ChartSystem {
 						text: "Распределение Максвелла-Больцмана"
 					},
 					legend: {
-						display: false
+						display: true
 					}
 				},
 				scales: {
@@ -59,9 +59,12 @@ export default class ChartSystem {
 
 		let newChart = {
 			id: id,
-			label: String(id),
+			label: `${String(id)} график`,
 			data: yValues,
-			borderColor: "rgba(247, 34, 34, 0.5)"
+			borderColor: `rgba(${Math.floor(Math.random() * 255)}, 
+				${Math.floor(Math.random() * 255)}, 
+				${Math.floor(Math.random() * 255)}, 
+				.6)`, // random color
 		}
 
 		this.datasetsOptions.push(newChart)
