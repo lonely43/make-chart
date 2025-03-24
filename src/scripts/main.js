@@ -9,9 +9,9 @@ function createChart() {
 			const R = 8.314 // универсальная газовая постоянная в Дж/(моль·К)
 
 			const coefficient = Math.pow(M / (2 * Math.PI * R * T), 3 / 2)
-			const exponential = (M * Math.pow(v, 2)) / (2 * R * T)
+			const exponential = -Math.exp(1)*(M * Math.pow(v, 2)) / (2 * R * T)
 			console.log(`${v}: ${4 * Math.PI * coefficient * Math.pow(v, 2) * Math.E * exponential}`)
-			return (4 * Math.PI * coefficient * Math.pow(v, 2) * Math.E * -exponential)
+			return (4 * Math.PI * coefficient * Math.pow(v, 2) * exponential)
 		}
 
 		for (let x = i1; x <= i2; x += step) {
