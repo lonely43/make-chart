@@ -4,7 +4,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   color: #222222;
-  background: #EEF0F2;
+  background: #eef0f2;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -89,20 +89,9 @@ input[type=number] {
   border: 0.1rem solid transparent;
   border-radius: 0.7rem;
   color: #222222;
-  text-align: center;
-  position: relative;
 }
 input[type=number]:focus {
   border: 0.1rem solid #6e9a85;
-}
-input[type=number]::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: red;
-  width: 2rem;
-  height: 2rem;
-  content: "T:";
 }
 
 button {
@@ -111,7 +100,7 @@ button {
   background-color: #6e9a85;
   font-size: 0.9em;
   font-weight: 600;
-  color: #EEF0F2;
+  color: #eef0f2;
   letter-spacing: 1px;
   outline: none;
   border: none;
@@ -128,23 +117,37 @@ button:hover {
 }
 .setting form {
   margin: 0 auto;
-  max-width: 12rem;
+  max-width: 24rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.2rem;
 }
 .setting form .btns {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1.6rem;
 }
 .setting form .btns span {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(1fr);
   gap: 0.6rem;
+}
+.setting form .btns span .arg {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2rem;
+}
+.setting form .btns span .arg label {
+  font-size: 1em;
+  font-weight: 500;
+}
+.setting form .btns span .arg input {
+  width: 6.4rem;
 }
 
 .chart {

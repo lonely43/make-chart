@@ -14,21 +14,6 @@ input[type="number"] {
 	}
 
 	color: $text;
-	text-align: center;
-
-	position: relative;
-
-	&::before {
-		position: absolute;
-		left: 0;
-		top: 0;
-
-		background-color: red;
-
-		width: 2rem;
-		height: 2rem;
-		content: "T:";
-	}
 }
 
 button {
@@ -36,6 +21,7 @@ button {
 	padding: 0.6rem 1rem;
 
 	background-color: $primary;
+
 	font-size: 0.9em;
 	font-weight: 600;
 	color: $background;
