@@ -14,9 +14,10 @@ body {
   padding: 0 2rem;
   margin: 0 auto;
   width: 100%;
-  max-width: 1600px;
+  max-width: 1400px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 6rem;
 }
 
@@ -84,6 +85,12 @@ p {
   }
 }
 .chart {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }

@@ -20,8 +20,11 @@ export default class ChartSystem {
 				plugins: {
 					title: {
 						display: true,
-						text: "Распределение Максвелла-Больцмана"
+						text: "Распределение Максвелла-Больцмана",
 					},
+					// font:{
+					// 	size: 30
+					// },
 					legend: {
 						display: true
 					}
@@ -38,7 +41,7 @@ export default class ChartSystem {
 					y: {
 						title: {
 							display: true,
-							text: "F(x) (м/c)", // title for OY
+							text: "F(v)*10^3с/м", // title for OY
 							align: "end",
 							color: "rgb(0, 0, 0)"
 						}

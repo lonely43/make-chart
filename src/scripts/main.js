@@ -11,7 +11,7 @@ document.querySelector("#submit").addEventListener(
 		id++
 
 		const vmax = document.querySelector("#speed").value
-		const M = document.querySelector("#mass").value*10**-3
+		const M = document.querySelector("#mass").value
 		const T = document.querySelector("#temp").value
 
 		MyChart.addChart(vmax, M, T, id)
