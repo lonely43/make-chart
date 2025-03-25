@@ -41,7 +41,7 @@ export default class ChartSystem {
 					y: {
 						title: {
 							display: true,
-							text: "F(v)*10^3с/м", // title for OY
+							text: "F(v)*10^3 (с/м)", // title for OY
 							align: "end",
 							color: "rgb(0, 0, 0)"
 						}
