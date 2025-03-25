@@ -17,13 +17,6 @@
 	<body>
 		<noscript>You need to enable JavaScript to see full app.</noscript>
 
-		<div class="alarm">
-			<div class="alarm-info">
-				<h1>Для лучшего опыта, используйте широкий экран</h1>
-				<button id="alarm-btn">ok</button>
-			</div>
-		</div>
-
 		<div id="app">
 			<div class="hero">
 				<h1>Функция Максвелла</h1>
@@ -77,13 +70,5 @@
 
 		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 		<script type="module" defer src="./src/scripts/main.js"></script>
-		
-		<script>
-			document.querySelector("#alarm-btn").addEventListener("click", hideAlarm, false)
-
-			function hideAlarm() {
-				document.querySelector(".alarm").style.display="none"
-			}
-		</script>
 	</body>
 </html>

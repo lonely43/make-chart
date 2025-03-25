@@ -7,10 +7,9 @@ document.querySelector("#submit").addEventListener(
 	"submit",
 	(event) => {
 		event.preventDefault()
-		
-		
+
 		document.querySelector(".chart").style.display = "block"
-		
+
 		id++
 		const vmax = document.querySelector("#speed").value
 		const M = document.querySelector("#mass").value
@@ -20,3 +19,9 @@ document.querySelector("#submit").addEventListener(
 	},
 	false
 )
+
+// for mobile
+let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+if(vw <= 600){
+	MyChart.changeAspectRation(1/1)
+}
