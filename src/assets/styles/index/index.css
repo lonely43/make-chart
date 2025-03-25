@@ -74,6 +74,43 @@ p {
   scroll-behavior: smooth;
 }
 
+.alarm {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100dvw;
+  height: 100dvh;
+  padding: 0 1rem;
+  background-color: rgba(0, 0, 0, 0.709);
+  backdrop-filter: blur(1rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.alarm .alarm-info {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.alarm .alarm-info h1 {
+  font-size: 1.2em;
+  text-align: center;
+  color: white;
+}
+.alarm .alarm-info button {
+  margin: 0 auto;
+  max-width: 10rem;
+}
+@media screen and (min-width: 400px) {
+  .alarm {
+    display: none;
+  }
+}
+
 .hero {
   display: flex;
   flex-direction: column;
