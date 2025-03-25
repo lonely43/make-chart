@@ -7,9 +7,11 @@ document.querySelector("#submit").addEventListener(
 	"submit",
 	(event) => {
 		event.preventDefault()
-
+		
+		
+		document.querySelector(".chart").style.display = "block"
+		
 		id++
-
 		const vmax = document.querySelector("#speed").value
 		const M = document.querySelector("#mass").value
 		const T = document.querySelector("#temp").value

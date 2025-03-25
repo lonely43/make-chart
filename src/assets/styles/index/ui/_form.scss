@@ -1,0 +1,54 @@
+@use "../../../variables" as *;
+
+input[type="number"] {
+	padding: 0.4rem 0.6rem;
+
+	width: 100%;
+
+	outline: none;
+	border: 0.1rem solid transparent;
+	border-radius: $border-radius;
+
+	&:focus {
+		border: 0.1rem solid $primary;
+	}
+
+	color: $text;
+	text-align: center;
+
+	position: relative;
+
+	&::before {
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		background-color: red;
+
+		width: 2rem;
+		height: 2rem;
+		content: "T:";
+	}
+}
+
+button {
+	width: 100%;
+	padding: 0.6rem 1rem;
+
+	background-color: $primary;
+	font-size: 0.9em;
+	font-weight: 600;
+	color: $background;
+	letter-spacing: 1px;
+
+	outline: none;
+	border: none;
+	//  border: .1rem solid $accent;
+	border-radius: $border-radius;
+
+	cursor: pointer;
+	transition: 400ms;
+	&:hover {
+		opacity: 0.8;
+	}
+}

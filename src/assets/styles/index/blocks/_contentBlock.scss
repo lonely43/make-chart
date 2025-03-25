@@ -1,0 +1,12 @@
+@use './settingBlock';
+@use './chartBlock';
+
+.contentBlock{
+   width: 100%;
+
+   display: flex;
+   justify-content: stretch;
+   align-items: flex-start;
+   justify-content: center;
+   gap: 4rem;
+}

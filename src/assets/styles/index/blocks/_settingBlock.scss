@@ -1,0 +1,30 @@
+@use "../ui/form";
+
+.setting {
+   width: fit-content;
+
+	transform: translateY(4rem);
+   
+	form {
+      margin: 0 auto;
+      max-width: 12rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+
+		.btns {
+         width: 100%;
+			display: flex;
+			flex-direction: column;
+         align-items: center;
+			gap: 1.2rem;
+
+			span {
+            width: 100%;
+				display: flex;
+				flex-direction: column;
+				gap: 0.6rem;
+			}
+		}
+	}
+}

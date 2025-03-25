@@ -3,7 +3,7 @@ body {
   overflow-x: hidden;
   width: 100vw;
   min-height: 100vh;
-  color: #141414;
+  color: #222222;
   background: #EEF0F2;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -24,7 +24,7 @@ body {
 a {
   text-decoration: none;
   transition: opacity 200ms;
-  color: #141414;
+  color: #222222;
 }
 a:hover {
   opacity: 0.8;
@@ -74,23 +74,91 @@ p {
   scroll-behavior: smooth;
 }
 
-@media screen and (max-width: 400px) {
-  html {
-    font-size: 0.8em;
-  }
-}
-@media screen and (max-width: 280px) {
-  html {
-    word-break: break-all;
-  }
-}
-.chart {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .hero {
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+input[type=number] {
+  padding: 0.4rem 0.6rem;
+  width: 100%;
+  outline: none;
+  border: 0.1rem solid transparent;
+  border-radius: 0.7rem;
+  color: #222222;
+  text-align: center;
+  position: relative;
+}
+input[type=number]:focus {
+  border: 0.1rem solid #6e9a85;
+}
+input[type=number]::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: red;
+  width: 2rem;
+  height: 2rem;
+  content: "T:";
+}
+
+button {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  background-color: #6e9a85;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #EEF0F2;
+  letter-spacing: 1px;
+  outline: none;
+  border: none;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  transition: 400ms;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+.setting {
+  width: fit-content;
+  transform: translateY(4rem);
+}
+.setting form {
+  margin: 0 auto;
+  max-width: 12rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.setting form .btns {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+.setting form .btns span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.chart {
+  width: 100%;
+  display: none;
+}
+
+.contentBlock {
+  width: 100%;
+  display: flex;
+  justify-content: stretch;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4rem;
 }

@@ -23,19 +23,24 @@
 				<p>f(v) = 4π*(M/2πRT)<sup>3/2</sup>*v<sup>2</sup>*e*(-(Mv<sup>2</sup>/2RT))</p>
 			</div>
 
-			<div class="setting">
-				<form id="submit">
-					<div class="btns">
-						<input type="number" placeholder="Температура" required id="temp" value="300"/>
-						<input type="number" placeholder="Молярная масса" step="0.0001" required id="mass" value="0.032"/>
-						<input type="number" placeholder="Макс. скорость" required id="speed" value="2000"/>
-					</div>
-					<button type="submit">Создать график</button>
-				</form>
-			</div>
+			<div class="contentBlock">
+				<div class="setting">
+					<form id="submit">
+						<div class="btns">
+							<h5>Переменные:</h5>
+							<span>
+								<input type="number" placeholder="Температура" required id="temp" value="300" />
+								<input type="number" placeholder="Молярная масса" step="0.0001" required id="mass" value="0.032" />
+								<input type="number" placeholder="Макс. скорость" required id="speed" value="2000" />
+							</span>
+						</div>
+						<button type="submit">Создать график</button>
+					</form>
+				</div>
 
-			<div class="chart">
-				<canvas id="myChart"></canvas>
+				<div class="chart">
+					<canvas id="myChart"></canvas>
+				</div>
 			</div>
 		</div>
 
